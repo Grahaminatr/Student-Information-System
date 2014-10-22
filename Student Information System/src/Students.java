@@ -1,14 +1,18 @@
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Students
 {
-	private String firstName;
-	private String lastName;
+	private static String firstName;
+	private static String lastName;
 	private double GPA;
-	private String period1;
-	private String period1Grade;
-	private String period2;
-	private String period2Grade;
-	private String period3;
-	private String period3Grade;
+	private static String period1;
+	private static String period1Grade;
+	private static String period2;
+	private static String period2Grade;
+	private static String period3;
+	private static String period3Grade;
 	
 	
 	public Students (String fn, String ln, double GPA, String p1, String p1G, String p2, String p2G, String p3, String p3G)
@@ -116,4 +120,21 @@ public class Students
 	public void setPeriod3Grade(String period3Grade) {
 		this.period3Grade = period3Grade;
 	}
+	 static ArrayList <Students> studentRoster = new ArrayList<Students>();
+	 public static void fillRoster()
+	 {
+	  Scanner file = new Scanner(new File("studentlist.txt"));
+	    while(file.hasNext())
+	    	{
+	    	firstName=file.next();
+			lastName=file.next();
+			period1=file.next();
+			period1Grade=file.next();
+			period2=file.next();
+			period2Grade=file.next();
+			period3=file.next();
+			period3Grade=file.next();
+			studentRoster.add(new Students(firstName, lastName, period1, period1Grade, period2, period2Grade, period3, period3Grade, 0.0));
+	 }
+}
 }

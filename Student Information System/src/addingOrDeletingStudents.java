@@ -4,12 +4,18 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class addingOrDeletingStudents {
+static String firstName;
+static String lastName;
+static String periodOne;
+static String periodOneGrade;
+static String periodTwo;
+static String periodTwoGrade;
+static String periodThree;
+static String periodThreeGrade;
 
-	 static ArrayList <Students> studentRoster = new ArrayList<Students>();
+
+	
 	 
-	 Scanner file = new Scanner (new File("studentlist.txt"));
+	 }
 	 
-	 
-	 
-	 
-}
+
