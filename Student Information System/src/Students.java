@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -121,7 +122,8 @@ public class Students
 		this.period3Grade = period3Grade;
 	}
 	 static ArrayList <Students> studentRoster = new ArrayList<Students>();
-	 public static void fillRoster()
+	 
+	 public static void fillRoster() throws FileNotFoundException
 	 {
 	  Scanner file = new Scanner(new File("studentlist.txt"));
 	    while(file.hasNext())
@@ -134,7 +136,7 @@ public class Students
 			period2Grade=file.next();
 			period3=file.next();
 			period3Grade=file.next();
-			studentRoster.add(new Students(firstName, lastName, period1, period1Grade, period2, period2Grade, period3, period3Grade, 0.0));
+			studentRoster.add(new Students(firstName, lastName, 0.0, period1, period1Grade, period2, period2Grade, period3, period3Grade));
 	 }
 }
 }
