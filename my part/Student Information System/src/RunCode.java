@@ -7,7 +7,6 @@ public class RunCode
 	public static void main(String[] args) throws FileNotFoundException
 		{
 		Students.fillRoster();
-		ChangeGrade.changeGrade();
+		Menus.Navigate();
 		}
-
 	}

@@ -24,7 +24,7 @@ public class Menus
 				choice1 = userInput1.nextInt();
 				if (choice1 == 1)
 					{
-					ChangeGrade.changeGrade();
+					
 					}
 				else if (choice1 == 2)
 					{
@@ -43,7 +43,7 @@ public class Menus
 				choice2 = userInput2.nextInt();
 				if (choice2 == 1)
 					{
-					
+					ChangeGrade.changeGrade();
 					}
 				else if (choice2 == 2)
 					{
