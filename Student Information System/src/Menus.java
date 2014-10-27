@@ -1,8 +1,10 @@
+import java.util.Collections;
 import java.util.Scanner;
 
 
 public class Menus
 	{
+	public static int choice4;
 	private static int choice;
 	private static int choice1, choice2,choice3;
 	public static void navigate()
@@ -23,15 +25,11 @@ public class Menus
 				choice1 = userInput1.nextInt();
 				if (choice1 == 1)
 					{
-					ChangeGrade.ChangeGrade();
+					addStudent.addStudent();
 					}
 				else if (choice1 == 2)
 					{
-					
-					}
-				else
-					{
-					
+					DeleteStudent.DeleteStudent();
 					}
 				break;
 			case 2:
@@ -42,15 +40,11 @@ public class Menus
 				choice2 = userInput2.nextInt();
 				if (choice2 == 1)
 					{
-					
+					ChangeGrade.ChangeGrade();
 					}
 				else if (choice2 == 2)
 					{
-				
-					}
-				else
-					{
-					
+					ChangeClasses.ChangeClasses();
 					}
 				break;
 			case 3:
@@ -62,22 +56,35 @@ public class Menus
 				choice3 = userInput3.nextInt();
 				if (choice3 == 1)
 					{
-					
+					Collections.sort(StudentData.studentRoster, new NameSorter());
 					}
 				else if (choice3 == 2)
 					{
-					
+					Collections.sort(StudentData.studentRoster, new GPASorter());
 					}
 				else if (choice3 == 3)
 					{
-					
-					}
-				else 
-					{
+					System.out.println("Which period do you want to sort by?");
+					System.out.println("1)Period 1");
+					System.out.println("2)Period 2");
+					System.out.println("3)Period 3");
+					Scanner userInput4 = new Scanner(System.in);
+					choice4 = userInput4.nextInt();
+					if (choice4 == 1)
+						{
+						Collections.sort(StudentData.studentRoster, new SortByperiod1());
+						}
+					else if (choice4 == 2)
+						{
+						Collections.sort(StudentData.studentRoster, new SortByPeriod2());
+						}
+					else
+						{
+						Collections.sort(StudentData.studentRoster, new SortByPeriod3());
+						}
 					
 					}
 				break;
 			}
-		// hi from home
 		}
 	}

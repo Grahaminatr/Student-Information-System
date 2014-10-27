@@ -5,15 +5,15 @@ import java.util.Scanner;
 
 public class Students
 {
-	private static String firstName;
-	private static String lastName;
+	private String firstName;
+	private String lastName;
 	private double GPA;
-	private static String period1;
-	private static String period1Grade;
-	private static String period2;
-	private static String period2Grade;
-	private static String period3;
-	private static String period3Grade;
+	private String period1;
+	private String period1Grade;
+	private String period2;
+	private String period2Grade;
+	private String period3;
+	private String period3Grade;
 	
 	
 	public Students (String fn, String ln, double GPA, String p1, String p1G, String p2, String p2G, String p3, String p3G)
@@ -33,7 +33,7 @@ public class Students
 	
 
 
-	public static String getFirstName() {
+	public String getFirstName() {
 		return firstName;
 	}
 
