@@ -47,7 +47,7 @@ public class ChangeGrade
 				}
 			else if (whichPeriod == 3)
 				{
-				System.out.println("\n"+ "What you like to change that grade to?");
+				System.out.println("\n"+ "What would you like to change that grade to?");
 				newGrade = input.next();
 				Students.studentRoster.get(fillerInt).setPeriod3Grade(newGrade);
 				}
