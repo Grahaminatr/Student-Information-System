@@ -33,7 +33,7 @@ public class Students
 	
 
 
-	public String getFirstName() {
+	public static String getFirstName() {
 		return firstName;
 	}
 
@@ -121,22 +121,18 @@ public class Students
 	public void setPeriod3Grade(String period3Grade) {
 		this.period3Grade = period3Grade;
 	}
-	 static ArrayList <Students> studentRoster = new ArrayList<Students>();
+
+
+	@Override
+	public String toString() {
+		return "Students [GPA=" + GPA + ", getLastName()=" + getLastName()
+				+ ", getGPA()=" + getGPA() + ", getPeriod1()=" + getPeriod1()
+				+ ", getPeriod1Grade()=" + getPeriod1Grade()
+				+ ", getPeriod2()=" + getPeriod2() + ", getPeriod2Grade()="
+				+ getPeriod2Grade() + ", getPeriod3()=" + getPeriod3()
+				+ ", getPeriod3Grade()=" + getPeriod3Grade() + "]";
+	}
+
 	 
-	 public static void fillRoster() throws FileNotFoundException
-	 {
-	  Scanner file = new Scanner(new File("studentlist.txt"));
-	    while(file.hasNext())
-	    	{
-	    	firstName=file.next();
-			lastName=file.next();
-			period1=file.next();
-			period1Grade=file.next();
-			period2=file.next();
-			period2Grade=file.next();
-			period3=file.next();
-			period3Grade=file.next();
-			studentRoster.add(new Students(firstName, lastName, 0.0, period1, period1Grade, period2, period2Grade, period3, period3Grade));
-	 }
-}
+	
 }
